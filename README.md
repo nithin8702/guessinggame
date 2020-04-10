@@ -1,6 +1,3 @@
-# guessinggame
-guessinggame
-
-Created on Wed Apr 10 12:42:10 DST 2020
-
-Number of lines : 24
+Guessing Game with number of lines:
+24
+Fri Apr 10 13:09:30 IST 2020
