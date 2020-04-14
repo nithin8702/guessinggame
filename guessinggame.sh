@@ -1,14 +1,11 @@
 #!/bin/bash bash
 # File: guessinggame.sh
 
-function guessnooffiles {
-echo "Guess the no of files in current directory?"
-}
+echo "Guess the no of files in current folder?"
 
-guessnooffiles
+function getuserinput {
 
 filecount=$(pwd | ls | wc -l)
-
 while [[ $response != $filecount ]]
 do
 	read response
@@ -20,5 +17,7 @@ do
 		echo "Lesser than Actual Count"
 	fi
 done
-
 echo "Correct guess , $response"
+}
+
+getuserinput
