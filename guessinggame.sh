@@ -1,24 +1,24 @@
 #!/bin/bash bash
 # File: guessinggame.sh
 
-function welcomemessage {
-echo "How many files are there in current directory?"
+function guessnooffiles {
+echo "Guess the no of files in current directory?"
 }
 
-welcomemessage
+guessnooffiles
 
-nooffiles=$(pwd | ls | wc -l)
+filecount=$(pwd | ls | wc -l)
 
-until [[ $response -eq $nooffiles ]]; do
+while [[ $response != $filecount ]]
+do
 	read response
-	if [[ $response -gt $nooffiles ]]
+	if [[ $response -gt $filecount ]]
 	then
-		echo "You entered $response, which is greater than the requested number, try again"
-	elif [[ $response -lt $nooffiles ]]
+		echo "Greater than Actual Count"
+	elif [[ $response -lt $filecount ]]
 	then
-		echo "You entered $response, which is lower than the requested number, try again"
+		echo "Lesser than Actual Count"
 	fi
 done
 
-echo "You have guessed the right number, $response ."
-echo "End Program."
+echo "Correct guess , $response"
